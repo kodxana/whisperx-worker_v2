@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "basic_transcription",
+      "input": {
+        "audio_file": "https://github.com/runpod-workers/sample-inputs/raw/main/audio/gettysburg.wav"
+      },
+      "timeout": 60000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA GeForce RTX 4090",
+    "gpuCount": 1,
+    "allowedCudaVersions": ["12.8"]
+  }
+}

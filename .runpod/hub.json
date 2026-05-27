@@ -1,0 +1,25 @@
+{
+  "title": "WhisperX Worker v2",
+  "description": "Speech transcription with word-level timestamps and speaker diarization using WhisperX",
+  "type": "serverless",
+  "category": "audio",
+  "iconUrl": "https://avatars.githubusercontent.com/u/236864052?v=4",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 30,
+    "gpuCount": 1,
+    "gpuIds": "AMPERE_16,AMPERE_24,ADA_24",
+    "allowedCudaVersions": ["12.8"],
+    "env": [
+      {
+        "key": "HF_TOKEN",
+        "input": {
+          "name": "Hugging Face Token",
+          "type": "string",
+          "description": "Hugging Face access token, required for speaker diarization models",
+          "default": ""
+        }
+      }
+    ]
+  }
+}
